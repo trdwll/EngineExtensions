@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat "py -u C:\\jenkins.py EngineExtensions Build \"%WORKSPACE%\""
+        bat "C:\\JenkinsBuilder.exe EngineExtensions Build \"%WORKSPACE%\""
       }
     }
 
@@ -19,7 +19,7 @@ pipeline {
         branch "main"
       }
       steps {
-        bat "py -u C:\\jenkins.py EngineExtensions Publish \"%WORKSPACE%\""
+        bat "C:\\JenkinsBuilder.exe EngineExtensions Publish \"%WORKSPACE%\""
       }
     }
   }
